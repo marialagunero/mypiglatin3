@@ -1,13 +1,12 @@
 $(document).ready(function() {
-  $("form#piglatin").submit(function(event){
+  $("form#piglatin").submit(function(event) {
     event.preventDefault();
 
-    var userWords = $("userInput").val();
-
+    var userWords = $("#userInput").val();
     function minusNonAlphabet(all) {
-      return all.replace(/[^a-zA-Z]/g, "");
+      return all.replace([^a-zA-Z0-9_]);
     };
 
-    console.log(minusNonAlphabet();
+    console.log();
   });
 });
